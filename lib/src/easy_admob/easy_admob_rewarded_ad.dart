@@ -52,7 +52,7 @@ class EasyAdmobRewardedAd extends EasyAdBase {
   }
 
   @override
-  dynamic show() {
+  dynamic show({String? customData}) {
     final ad = _rewardedAd;
     if (ad == null) return;
 

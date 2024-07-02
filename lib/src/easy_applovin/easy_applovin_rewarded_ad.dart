@@ -34,7 +34,7 @@ class EasyApplovinRewardedAd extends EasyAdBase {
   }
 
   @override
-  show() {
+  show({String? customData}) {
     if (!_isAdLoaded) return;
 
     if (adUnitType == AdUnitType.rewarded) {

@@ -32,7 +32,7 @@ class EasyFacebookBannerAd extends EasyAdBase {
   Future<void> load() async {}
 
   @override
-  dynamic show() {
+  dynamic show({String? customData}) {
     final bannerSize = adSize == null
         ? BannerSize.STANDARD
         : BannerSize(width: adSize!.width, height: adSize!.height);

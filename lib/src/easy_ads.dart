@@ -368,6 +368,7 @@ class EasyAds {
   bool showAd(AdUnitType adUnitType,
       {AdNetwork adNetwork = AdNetwork.any,
       int loaderDuration = 0,
+     String? customData,
       BuildContext? context}) {
     if (loaderDuration > 0) {
       assert(context != null,
@@ -389,9 +390,9 @@ class EasyAds {
         if (ad?.adUnitType == AdUnitType.interstitial &&
             loaderDuration > 0 &&
             context != null) {
-          showLoaderDialog(context, loaderDuration).then((_) => ad?.show());
+          showLoaderDialog(context, loaderDuration).then((_) => ad?.show(customData: customData));
         } else {
-          ad?.show();
+          ad?.show(customData: customData);
         }
         return true;
       } else {
@@ -408,9 +409,9 @@ class EasyAds {
           if (ad.adUnitType == AdUnitType.interstitial &&
               loaderDuration > 0 &&
               context != null) {
-            showLoaderDialog(context, loaderDuration).then((_) => ad.show());
+            showLoaderDialog(context, loaderDuration).then((_) => ad.show(customData: customData));
           } else {
-            ad.show();
+            ad.show(customData: customData);
           }
           return true;
         }

@@ -34,7 +34,7 @@ class EasyUnityAd extends EasyAdBase {
   }
 
   @override
-  show() {
+  show({String? customData}) {
     UnityAds.showVideoAd(
       placementId: adUnitId,
       onStart: onStartUnityAd,

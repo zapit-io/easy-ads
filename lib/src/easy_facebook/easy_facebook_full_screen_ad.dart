@@ -49,7 +49,7 @@ class EasyFacebookFullScreenAd extends EasyAdBase {
   }
 
   @override
-  show() async {
+  show({String? customData}) async {
     if (!_isAdLoaded) return;
 
     if (adUnitType == AdUnitType.interstitial) {

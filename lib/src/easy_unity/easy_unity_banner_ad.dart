@@ -31,7 +31,7 @@ class EasyUnityBannerAd extends EasyAdBase {
   Future<void> load() async {}
 
   @override
-  dynamic show() {
+  dynamic show({String? customData}) {
     final ad = UnityBannerAd(
       size: adSize == null
           ? BannerSize.standard

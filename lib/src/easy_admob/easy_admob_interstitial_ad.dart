@@ -55,7 +55,7 @@ class EasyAdmobInterstitialAd extends EasyAdBase {
   }
 
   @override
-  show() {
+  show({String? customData}) {
     final ad = _interstitialAd;
     if (ad == null) return;
 

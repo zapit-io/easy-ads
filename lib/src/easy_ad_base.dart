@@ -15,7 +15,7 @@ abstract class EasyAdBase {
 
   /// This will load ad, It will only load the ad if isAdLoaded is false
   Future<void> load();
-  dynamic show();
+  dynamic show({String? customData});
 
   EasyAdCallback? onAdLoaded;
   EasyAdCallback? onAdShowed;

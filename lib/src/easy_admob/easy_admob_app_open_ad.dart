@@ -50,7 +50,7 @@ class EasyAdmobAppOpenAd extends EasyAdBase {
   }
 
   @override
-  show() async {
+  show({String? customData}) async {
     if (!isAdLoaded) {
       onAdFailedToShow?.call(adNetwork, adUnitType, null,
           'Tried to show ad but no ad was loaded, now sent a call for loading and will show automatically');

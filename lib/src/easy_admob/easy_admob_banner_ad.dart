@@ -65,7 +65,7 @@ class EasyAdmobBannerAd extends EasyAdBase {
   }
 
   @override
-  dynamic show() {
+  dynamic show({String? customData}) {
     if (_bannerAd == null || _isAdLoaded == false) {
       load();
       return SizedBox(

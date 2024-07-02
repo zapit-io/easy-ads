@@ -21,7 +21,7 @@ class EasyApplovinBannerAd extends EasyAdBase {
   Future<void> load() async {}
 
   @override
-  dynamic show() {
+  dynamic show({String? customData}) {
     return MaxAdView(
       adUnitId: adUnitId,
       adFormat: AdFormat.banner,

@@ -37,6 +37,7 @@ class EasyUnityAd extends EasyAdBase {
   show({String? customData}) {
     UnityAds.showVideoAd(
       placementId: adUnitId,
+      serverId: customData,
       onStart: onStartUnityAd,
       onClick: onClickUnityAd,
       onSkipped: onSkipUnityAd,
